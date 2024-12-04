@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #parent{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(255, 97, 12);
+        }
+    </style>
+    </head>
+    <body>
+        <h1 class="parent"></h1>
+        <div id="parent"></div>
+
+        <script>
+            console.log("This is JS from frontend")
+
+           // for(let i=0;i<10;i++){
+               // console.log(i)
+               // console.log("This is Mani")
+           // }
+
+          //let i=0;
+            //while(i<11){
+              //  console.log(This is while loop running ${i} times)
+                //i++;
+            //}
+
+            let j=0;
+            do {
+                console.log(`This is do while loop running ${j} times`)
+                j++;
+            } while (j < 11);
+
+            const changeparent=()=>{
+                document.getElementById("parent").style.backgroundColor="blue";
+                document.getElementById("parent").style.borderRadius="50%";
+                document.getElementById("parent").style.boxShadow="10px 10px 15px black";
+            }
+
+            setTimeout(()=>{
+                changeparent()
+            },1000)
+            
+            const fruits= ["apple", "mango", "banana", "grapes", "guava"];
+            fruits.push("orange")
+            fruits.pop()
+            fruits.pop()
+            fruits.pop()
+            console.log(fruits[2])
+
+            for(let x in fruits){
+                console.log(`I like to eat ${fruits[x]}`)
+            }
+
+
+            console.log("This is nornal fruits", fruits)
+
+            const sortedFruits=fruits.sort()
+            console.log("This is sorted fruits", sortedFruits)
+
+            const reversedFruits=fruits.reverse()
+            console.log("This is reversed fruits", reversedFruits)
+
+
+
+            const ages=[77,10,65,11,9,43,66,76,90]
+            console.log(ages.sort())
+            //ascending order
+            console.log(ages.sort((a,b)=>a-b))
+            //descending order
+            console.log(ages.sort((a,b)=>b-a))
+
+
+            //mapping
+            ages.map((x)=>{
+                console.log(`I am${x} years old using map 😂`)
+            })
+
+            //for each
+            ages.forEach((x)=>{
+                console.log(`I am${x} years old using map ❤`)
+            })
+
+            //filter
+            const voters=ages.filter((age)=>age>18)
+            console.log(voters)
+
+            //task5
+            //filter an array (retired) for people above 60
+
+            const retired=ages.filter((age)=>age>60)
+            console.log(retired)
+
+            const students=["Rohan","Mohan","Rohit","Sohan","Meera","Vaibhav",]
+            const slicedArray=students.slice(2,5)
+            console.log(slicedArray)
+
+            //Splice in Array
+            console.log("Original Array", students)
+            const splicedArray=students.splice(2,2,"Selena","Uday")
+            console.log(students)
+
+            //include
+            const checkName=students.includes("Suraj")
+            console.log(checkName)
+
+            //Negative
+            const sampleNegative=students.at(-4)
+            console.log(sampleNegative)
+            
+
+            //let
+            //var
+            //const
+
+            let name="Sujeet"
+            function myFunction(){
+            let name="Sujeeta"
+            console.log(name)
+            }
+            myFunction()
+
+            let age=false
+
+            // Objects
+
+            let student={
+                name:"Sonu",
+                class:"XII",
+                rollno:20,
+                marks:99,
+            }
+
+            
+            
+            
+
+
+
+        </script>
+
+    </body>
+    </html>
