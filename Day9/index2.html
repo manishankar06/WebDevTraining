@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility Check with Bulb</title>
+    <style>
+        /* Use Flexbox to center the content vertically and horizontally */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .A {
+            text-align: center;
+        }
+
+        #bulb {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <h1 id="check">Check your eligibility!</h1>
+        <div id="bulb"></div>
+        <button onclick="checkAge()">Check your age!</button>
+    </div>
+
+    <script>
+        const checkAge = () => {
+            let age = window.prompt("Please enter your age: ");
+            let check = document.getElementById("check");
+            let bulb = document.getElementById("bulb");
+
+            age = parseInt(age);  // Convert age to a number
+
+            if (age >= 18) {
+                check.innerHTML = "You are eligible to vote!";
+                bulb.style.backgroundColor = "green"; 
+            } else if (age > 0) {
+                check.innerHTML = "You are not eligible to vote.";
+                bulb.style.backgroundColor = "red";
+            } else {
+                check.innerHTML = "Please enter a valid age.";
+                bulb.style.backgroundColor = "yellow";  // Reset to default color
+            }
+        }
+    </script>
+</body>
+</html>

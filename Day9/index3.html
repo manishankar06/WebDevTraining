@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section {
+            height: 100px;
+            width: 100px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1 id="idSelector" class="classSelector">Hello World</h1>
+        <button onclick="idSelector()">Use ID</button>
+        <button onclick="classSelector()">Use Class</button>
+        <button onclick="queryselectorDemo()">Use Query</button>
+    </div>
+
+    <script>
+        const idSelector = () => {
+            let element = document.getElementById('idSelector');
+            console.log(element);
+            element.innerHTML = "This is Mani and I am using ID Selector";
+        };
+
+        const classSelector = () => {
+            document.getElementsByClassName('classSelector')[0].innerHTML = "This is Mani and I am using Class selector";
+        };
+
+        function queryselectorDemo() {
+            document.querySelector('#idSelector').innerHTML = "This is Mani and I am using Query selector";
+        }
+    </script>
+</body>
+</html>
